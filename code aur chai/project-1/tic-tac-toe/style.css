@@ -10,9 +10,13 @@ body {
 
 .container{
     height: 70vh;
+
+    /* necessary to use flex properties */
     display: flex;
-   
+    
+    /* horizontally */
     justify-content: center;
+    /* vertically */
     align-items: center;
 }
 

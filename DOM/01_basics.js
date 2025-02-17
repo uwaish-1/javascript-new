@@ -169,11 +169,11 @@
 //  let el = document.createElement("div")
 
 
-// let newBtn = document.createElement("button")
-// newBtn.innerText = "clicke me!"
-// console.log(newBtn);
-// let div = document.querySelector("div")
-// div.append(newBtn)
+let newBtn = document.createElement("button")
+newBtn.innerText = "clicke me!"
+console.log(newBtn);
+let div = document.querySelector("div")
+div.append(newBtn)
 
 // let newheading = document.createElement("h1");
 // newheading.innerHTML = "HI"
@@ -183,3 +183,5 @@
 
 
 // 1. appendchild() ....... 2. removechild()
+//  classlist
+// div.classList.add("another class")

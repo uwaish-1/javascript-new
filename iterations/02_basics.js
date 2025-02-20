@@ -24,7 +24,7 @@
 
 
 // for(const [key,value] of map){
-//     console.log(key,value);n
+//     console.log(key,value);
 // }
 
 
@@ -104,7 +104,7 @@ const mycoding = [
 // })
 
 
-//  foreach loop don't return any value -------
+//  foreach loop don't return any value ------->>>>
 // const values = mycoding.forEach( (i) => {
 //         console.log(i);
 //         // return i;
@@ -122,11 +122,11 @@ const mycoding = [
 
 const mynums = [1,2,3,4,5,6,7,8,9]
 
-// const values = mynums.filter( (num) => {
-//     return num>5
-// })
+const values = mynums.filter( (num) => {
+    return num>5
+})
 
-// console.log(values);
+console.log(values);
 
 
 const newNums = []

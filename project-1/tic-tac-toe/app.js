@@ -27,16 +27,16 @@ const resetgame = () =>{
 
 boxes.forEach((box) =>{
     box.addEventListener("click",()=>{
-        console.log("box was clicked");
+        // console.log("box was clicked");
         if(turnO){
             box.innerText = "O"
             turnO = false;
         }
         else{
             box.innerText = "X"
-            turnO = "true";
+            turnO = true;
         }
-        box.disabled = "true"
+        box.disabled = true
 
         checkwinner();
     });
@@ -44,13 +44,13 @@ boxes.forEach((box) =>{
 
 const disableboxes = () => {
     for(let box of boxes){
-        box.disabled = "true"
+        box.disabled = true
     }
 }
 
 const enableboxes = () => {
     for(let box of boxes){
-        box.disabled = "false"
+        box.disabled = false
         box.innerText = "";
     }
 }
@@ -62,10 +62,10 @@ const showWinner = (winner) => {
 
 const checkwinner = () => {
     for(let pattern of winpatterns){
-        console.log(
-        boxes[pattern[0]].innerText,
-        boxes[pattern[1]].innerText,
-        boxes[pattern[2]].innerText);
+        // console.log(
+        // boxes[pattern[0]].innerText,
+        // boxes[pattern[1]].innerText,
+        // boxes[pattern[2]].innerText);
         
         let pos1 = boxes[pattern[0]].innerText;
         let pos2 = boxes[pattern[1]].innerText;
@@ -74,7 +74,7 @@ const checkwinner = () => {
         if(pos1 != "" && pos2 != "" && pos3 != ""){
             if(pos1 === pos2 && pos2 === pos3){
                 console.log("winner");
-                showWinner();
+                showWinner(pos1);
             }
         }
     }

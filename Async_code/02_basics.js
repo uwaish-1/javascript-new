@@ -110,14 +110,14 @@
 
 
 
-function getdata(dataid){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data",dataid);
-            resolve("success")
-        },4000)
-    })
-}
+// function getdata(dataid){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data",dataid);
+//             resolve("success")
+//         },4000)
+//     })
+// }
 
 // getdata(1).then((res)=>{
 //     console.log(res);
@@ -127,14 +127,73 @@ function getdata(dataid){
 //     })
 // })
 
-getdata(1).then((res)=>{
-    return getdata(2);
-})
-.then((res)=>{
-    // console.log(res);
-    return getdata(3);
-})
-.then((res) =>{
-    console.log(res);
+// getdata(1).then((res)=>{
+//     return getdata(2);
+// })
+// .then((res)=>{
+//     // console.log(res);
+//     return getdata(3);
+// })
+// .then((res) =>{
+//     console.log(res);
     
-})
+// })
+
+
+
+
+
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// async- await
+
+
+// function api() {
+//     return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         console.log("weather report");
+//         resolve(200);
+//     },2000)
+// });
+// }
+
+// async function getweatherdata(){
+//     // 1st
+//     await api();
+//     // 2nd
+//     await api(); 
+
+// }
+
+
+
+
+function getdata(dataid){
+    return new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            console.log("data",dataid);
+            resolve(200);
+        },2000)
+    })
+}
+
+// // Async-Await
+// async function getalldata(){
+//     await getdata(1);
+//     await getdata(2);
+//     await getdata(3);
+// }
+
+
+// IIFE
+
+
+(async function(){
+    await getdata(1);
+    await getdata(2);
+    await getdata(3);
+})();
